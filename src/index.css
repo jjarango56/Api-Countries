@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root {
+  --color-main-bg: oklch(97.015% 0.00011 271.152);
+  --color-text: oklch(19.234% 0.00744 229.435);
+  --color-header-bg: oklch(98.894% 0.00531 16.082);
+  --color-input-bg: oklch(95.514% 0.00011 271.152)
+;
+  /* DARK */
+  --color-main-bg2:oklch(28.705% 0.02615 246.549);
+  --color-text-dark: oklch(100% 0.00011 271.152);
+  --color-header-bg2: oklch(33.727% 0.0282 244.675);
+  --color-input-bg2:  oklch(33.727% 0.0282 244.675);
+}
+
+@theme {
+  --color-main-bg: var(--color-main-bg);
+  --color-text: var(--color-text);
+  --color-header-bg: var(--color-header-bg);
+  --color-input-bg: var(--color-input-bg);
+}
+
+@custom-variant dark (&:is(.dark *));
+
+.dark {
+  --color-main-bg: var(--color-main-bg2);
+  --color-text: var(--color-text-dark);
+  --color-header-bg: var(--color-header-bg2);
+  --color-input-bg: var(--color-input-bg2);
+}
