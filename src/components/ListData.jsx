@@ -1,20 +1,27 @@
-
 import { useFilterData } from "../hooks/useFilterData";
 export /**
  *
  *
- * @return {*} 
+ * @return {*}
  */
 const LisData = () => {
-  const {query,data,navigate,setQueryRegion,queryRegion,newData,setQuery} = useFilterData();
- 
+  const {
+    query,
+    data,
+    navigate,
+    setQueryRegion,
+    queryRegion,
+    newData,
+    setQuery,
+    filterRegion,
+  } = useFilterData();
 
   return (
     <>
       <aside className="grid grid-cols-2 gap-10  py-5 px-5">
         <input
           type="text"
-          className="bg-input-bg px-5 text-xs text-texto"
+          className="bg-input-bg px-5 text-xs text-text"
           placeholder="Search countries"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -26,10 +33,8 @@ const LisData = () => {
           value={queryRegion}
           onChange={(e) => setQueryRegion(e.target.value)}
         >
-          {data.map((i) => (
-            <option key={i.alpha3Code} >
-              {i.region}
-            </option>
+          {filterRegion.map((i) => (
+            <option key={i.alpha3Code}>{i.region}</option>
           ))}
         </select>
       </aside>
@@ -39,7 +44,6 @@ const LisData = () => {
             key={i.alpha3Code}
             className=" flex flex-col w-full items-center justify-items-center"
           >
-          
             <img
               className="rounded-t-md h-58 w-96 object-cover"
               src={i.flags.png}
@@ -60,19 +64,19 @@ const LisData = () => {
               >
                 {i.name}
               </button>
-              <p className="text-xs font-bold text-texto">
-                Population : 
-                <span className="font-normal text-texto px-1">
+              <p className="text-xs font-bold text-text">
+                Population :
+                <span className="font-normal text-text px-1">
                   {i.population}
                 </span>
               </p>
-              <p className="text-xs font-bold text-texto">
+              <p className="text-xs font-bold text-text">
                 Region :
-                <span className="font-normal text-texto px-1">{i.region}</span>
+                <span className="font-normal text-text px-1">{i.region}</span>
               </p>
-              <p className="text-xs font-bold text-texto">
+              <p className="text-xs font-bold text-text">
                 Capital :
-                <span className="font-normal text-texto">{i.capital}</span>
+                <span className="font-normal text-text">{i.capital}</span>
               </p>
             </div>
           </div>

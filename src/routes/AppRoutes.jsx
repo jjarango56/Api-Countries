@@ -5,7 +5,11 @@ import { LisData } from "../components/ListData";
 import { CurrentCountrie } from "../pages/CurrentCountrie";
 import { LoadingData } from "../components/LoadingData";
 import { FallbackError } from "../components/ErrorBoundary";
-
+/**
+ * Application router configuration using React Router's Data API.
+ * Defines main routes, data loaders, and error handling.
+ * * @type {ReturnType<typeof createBrowserRouter>}
+ */
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +26,7 @@ export const router = createBrowserRouter([
       {
         path: "CurrentCountrie/:id/:name/:population/:img/:topLevelDomain/:area/:nativeName/:subregion/:borders",
         element: <CurrentCountrie />,
+        HydrateFallback:LoadingData,
       },
       {
         path:"*",

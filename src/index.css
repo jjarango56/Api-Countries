@@ -4,13 +4,25 @@
   --color-main-bg: oklch(97.015% 0.00011 271.152);
   --color-text: oklch(19.234% 0.00744 229.435);
   --color-header-bg: oklch(98.894% 0.00531 16.082);
-  --color-input-bg: oklch(95.514% 0.00011 271.152)
-;
+  --color-input-bg: oklch(95.514% 0.00011 271.152);
+  --color-text-countrie: oklch(61.283% 0.01236 243.918);
   /* DARK */
-  --color-main-bg2:oklch(28.705% 0.02615 246.549);
-  --color-text-dark: oklch(100% 0.00011 271.152);
+  --color-main-bg2: oklch(28.705% 0.02615 246.549);
+  --color-text-dark: oklch(89.99% 0.00325 15.484);
   --color-header-bg2: oklch(33.727% 0.0282 244.675);
-  --color-input-bg2:  oklch(33.727% 0.0282 244.675);
+  --color-input-bg2: oklch(33.727% 0.0282 244.675);
+  --color-text-countrie2: oklch(62.442% 0.01991 245.636);
+
+
+  --color-white: oklch(100% 0.00011 271.152);
+  --color-error-bg: oklch(97.053% 0.01292 16.91);
+  --color-error-text: oklch(57.707% 0.21516 27.312);
+  --color-error-message: oklch(63.681% 0.20784 25.315);
+  --color-button-primary: oklch(54.616% 0.21529 262.896);
+  --color-button-primary-hover: oklch(48.821% 0.21724 264.392);
+  --color-loading-blue: oklch(54.616% 0.21529 262.896);
+  --color-button-gray: oklch(71.366% 0.01926 261.373);
+  --color-shadow-dark: oklch(21.009% 0.03179 264.678);
 }
 
 @theme {
@@ -18,6 +30,17 @@
   --color-text: var(--color-text);
   --color-header-bg: var(--color-header-bg);
   --color-input-bg: var(--color-input-bg);
+  --color-text-countrie: var(--color-text-countrie);
+
+  --color-white: var(--color-white);
+  --color-error-bg: var(--color-error-bg);
+  --color-error-text: var(--color-error-text);
+  --color-error-message: var(--color-error-message);
+  --color-button-primary: var(--color-button-primary);
+  --color-button-primary-hover: var(--color-button-primary-hover);
+  --color-loading-blue: var(--color-loading-blue);
+  --color-button-gray: var(--color-button-gray);
+  --color-shadow-dark: var(--color-shadow-dark);
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -27,4 +50,5 @@
   --color-text: var(--color-text-dark);
   --color-header-bg: var(--color-header-bg2);
   --color-input-bg: var(--color-input-bg2);
+  --color-text-countrie: var(--color-text-countrie2);
 }

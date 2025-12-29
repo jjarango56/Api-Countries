@@ -3,9 +3,9 @@ export const FallbackError = ({ error, resetErrorBoundary }) => {
   return (
     <div className="min-h-[400px] w-full flex flex-col items-center justify-center p-6 text-center bg-main-bg rounded-lg shadow-md h-screen ">
       <TbError404Off />
-      <div className="bg-red-100 p-4 rounded-full mb-4">
+      <div className="bg-error-bg p-4 rounded-full mb-4">
         <svg
-          className="w-12 h-12 text-red-600"
+          className="w-12 h-12 text-error-text"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -19,19 +19,19 @@ export const FallbackError = ({ error, resetErrorBoundary }) => {
         </svg>
       </div>
 
-      <h2 className="text-2xl font-bold text-texto mb-2">
+      <h2 className="text-2xl font-bold text-text mb-2">
         ¡Ups! Algo salió mal
       </h2>
-      <p className="text-texto opacity-75 mb-6 max-w-md">
+      <p className="text-text opacity-75 mb-6 max-w-md">
         No pudimos cargar la información de los países. Error:
-        <span className="font-mono text-red-500 block mt-1">
+        <span className="font-mono text-error-message block mt-1">
           {error.message}
         </span>
       </p>
 
       <button
         onClick={resetErrorBoundary}
-        className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition-colors shadow-lg"
+        className="px-6 py-2 bg-button-primary hover:bg-button-primary-hover text-white font-semibold rounded-md transition-colors shadow-lg"
       >
         Reintentar cargar
       </button>

@@ -8,8 +8,19 @@ export function ToggleTheme() {
 
   return (
     <>
-      <button className="text-texto flex items-center gap-2 " onClick={handleTheme}>
-        {theme === "light" ? (<><CiDark /> Dark mode</> ):( <><CiLight /> Light mode</>)}
+      <button
+        className="text-text flex items-center gap-2 "
+        onClick={handleTheme}
+      >
+        {theme === "light" ? (
+          <>
+            <CiDark /> Dark mode
+          </>
+        ) : (
+          <>
+            <CiLight /> Light mode
+          </>
+        )}
       </button>
     </>
   );
