@@ -1,7 +1,7 @@
 import { TbError404Off } from "react-icons/tb";
 export const FallbackError = ({ error, resetErrorBoundary }) => {
   return (
-    <div className="min-h-[400px] w-full flex flex-col items-center justify-center p-6 text-center bg-main-bg rounded-lg shadow-md h-screen ">
+    <div className="min-h-100 w-full flex flex-col items-center justify-center p-6 text-center bg-main-bg rounded-lg shadow-md h-screen ">
       <TbError404Off />
       <div className="bg-error-bg p-4 rounded-full mb-4">
         <svg

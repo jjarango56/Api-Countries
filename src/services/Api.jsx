@@ -10,7 +10,7 @@ import axios from "axios";
 
 export const getData = async () => {
   try {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     const response = await axios.get("/data.json");
     if (!response) {
       throw new Error("Ocurrio un error al obtener el atlas de paises");

@@ -4,8 +4,9 @@
   --color-main-bg: oklch(97.015% 0.00011 271.152);
   --color-text: oklch(19.234% 0.00744 229.435);
   --color-header-bg: oklch(98.894% 0.00531 16.082);
-  --color-input-bg: oklch(95.514% 0.00011 271.152);
+  --color-input-bg: oklch(100% 0.00011 271.152);
   --color-text-countrie: oklch(61.283% 0.01236 243.918);
+   --color-button-gray: oklch(32.109% 0.00004 271.152);
   /* DARK */
   --color-main-bg2: oklch(28.705% 0.02615 246.549);
   --color-text-dark: oklch(89.99% 0.00325 15.484);
@@ -21,7 +22,7 @@
   --color-button-primary: oklch(54.616% 0.21529 262.896);
   --color-button-primary-hover: oklch(48.821% 0.21724 264.392);
   --color-loading-blue: oklch(54.616% 0.21529 262.896);
-  --color-button-gray: oklch(71.366% 0.01926 261.373);
+  --color-button-gray2: oklch(71.366% 0.01926 261.373);
   --color-shadow-dark: oklch(21.009% 0.03179 264.678);
 }
 
@@ -51,4 +52,5 @@
   --color-header-bg: var(--color-header-bg2);
   --color-input-bg: var(--color-input-bg2);
   --color-text-countrie: var(--color-text-countrie2);
+   --color-button-gray: var(--color-button-gray2)
 }

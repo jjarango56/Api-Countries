@@ -24,7 +24,7 @@ export const router = createBrowserRouter([
         ErrorBoundary:FallbackError,
       },
       {
-        path: "CurrentCountrie/:id/:name/:population/:img/:topLevelDomain/:area/:nativeName/:subregion/:borders",
+        path: "CurrentCountrie/:id/:name/:population/:img/:topLevelDomain/:area/:nativeName/:subregion/:borders/:capital",
         element: <CurrentCountrie />,
         HydrateFallback:LoadingData,
       },
