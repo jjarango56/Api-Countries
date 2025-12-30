@@ -1,7 +1,13 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { TiArrowLeft } from "react-icons/ti";
 
-export const CurrentCountrie = () => {
+/**
+ * Displays details for a country using URL parameters.
+ * @returns {import('react').JSX.Element}
+ * @example 
+ * <CurrentCountry/>
+ */
+export const CurrentCountry = () => {
   const {
     name,
     population,
@@ -15,9 +21,6 @@ export const CurrentCountrie = () => {
     capital
   } = useParams();
   const navigate = useNavigate();
-  if (!id) {
-    console.log("id no encontrado");
-  }
   return (
     <section className="flex flex-col md:flex-row min-h-screen w-full items-start md:items-center justify-center md:justify-evenly px-5 py-5 gap-8">
       <div className="w-full md:w-auto">
@@ -73,6 +76,12 @@ export const CurrentCountrie = () => {
               Native Name : {" "}
               <span className="font-medium text-text-countrie">
                 {nativeName}
+              </span>
+            </p>
+            <p className="font-bold text-sm ">
+                ID : {" "}
+              <span className="font-medium text-text-countrie">
+                {id}
               </span>
             </p>
           </div>

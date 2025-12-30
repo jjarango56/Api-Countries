@@ -1,13 +1,12 @@
 import axios from "axios";
 
 /**
- * consume the Api countries
+ * Fetch country data from the local JSON file.
  * @async
- * @function GetData
- * @returns {Promise<Object[]>}
+ * @function getData
+ * @returns {Promise<Object[]>} Resolves to an array of country objects.
  * @throws {Error}
  */
-
 export const getData = async () => {
   try {
     await new Promise((resolve) => setTimeout(resolve, 1000));

@@ -5,7 +5,7 @@ import { useMemo } from "react";
  * * @function useQuery
  * @returns {URLSearchParams} A memoized instance of URLSearchParams.
  */
-  export const useQuery = () => {
+export const useQuery = () => {
   const { search } = useLocation();
   return useMemo(() => new URLSearchParams(search), [search]);
 };

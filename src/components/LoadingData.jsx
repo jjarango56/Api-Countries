@@ -1,4 +1,11 @@
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+
+/**
+ * Fullscreen loading indicator shown while data is being fetched.
+ * @returns {import('react').JSX.Element}
+ * @example 
+ * <LoadingData/>
+ */
 export const LoadingData = () => {
   return (
     <div className="flex flex-col bg-main-bg h-screen w-full items-center justify-center bg-background">

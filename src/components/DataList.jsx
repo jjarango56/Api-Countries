@@ -1,4 +1,11 @@
 import { useFilterData } from "../hooks/useFilterData";
+
+/**
+ * Lists countries from API and provides search and region filters.
+ * @returns {import('react').JSX.Element} The country list UI.
+ * @example
+ * <ListData/>
+ */
 export const LisData = () => {
   const {
     query,
@@ -48,7 +55,7 @@ export const LisData = () => {
                 className="cursor-pointer text-2xl text-center font-bold"
                 onClick={() =>
                   navigate(
-                    `/CurrentCountrie/${i.alpha3Code}/${i.name}/${
+                    `/CurrentCountry/${i.alpha3Code}/${i.name}/${
                       i.population
                     }/${encodeURIComponent(i.flags.png)}/${i.topLevelDomain}/${
                       i.area

@@ -1,16 +1,34 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { useState } from "react";
+
 /**
- * Custom hook to handle data filtering by name and region.
- * * @returns {Object} Filter states, handlers, and the filtered data sets.
+ * @template {object} T
+ * @typedef {Object} UseFilterData
  * @property {string} query - Current search input value.
- * @property {Array} data - Raw data from the router loader.
+ * @property {T[]} data - Raw data array from the router loader.
  * @property {Function} setQuery - Updates the name search filter.
  * @property {string} queryRegion - Currently selected region.
  * @property {Function} setQueryRegion - Updates the region filter.
- * @property {Array} newData - Data filtered by name or region.
- * @property {Array} filterRegion - List of unique regions for dropdowns.
- * @property {Function} navigate - React Router navigation instance.
+ * @property {Object[]} newData - Data filtered by name or region.
+ * @property {Object[]} filterRegion - List of unique region objects for dropdowns.
+ * @property {Function} navigate - React Router navigation function.
+ */
+
+/**
+ * @template {object} T
+ * Custom hook to handle data filtering by name and region.
+ * @returns {UseFilterData<T>} Filter states, handlers, and filtered datasets.
+ * @example
+ * return {
+    query,
+    data,
+    navigate,
+    setQueryRegion,
+    queryRegion,
+    newData,
+    setQuery,
+    filterRegion
+  };
  */
 export const useFilterData = () => {
   const data = useLoaderData() || [];
@@ -28,9 +46,10 @@ export const useFilterData = () => {
       : regionLower.includes(selectLower);
   });
 
-  const filterRegion = data.filter((item, index, self) => 
-  index === self.findIndex((t) => t.region === item.region)
-);
+  const filterRegion = data.filter(
+    (item, index, self) =>
+      index === self.findIndex((t) => t.region === item.region)
+  );
 
   return {
     query,
@@ -40,6 +59,6 @@ export const useFilterData = () => {
     queryRegion,
     newData,
     setQuery,
-    filterRegion
+    filterRegion,
   };
 };

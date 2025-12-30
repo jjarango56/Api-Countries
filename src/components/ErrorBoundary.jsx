@@ -1,4 +1,10 @@
 import { TbError404Off } from "react-icons/tb";
+
+/**
+ * Error fallback UI for route or component errors.
+ * @param {{error: Error, resetErrorBoundary: Function}} props - Error info and reset handler.
+ * @returns {import('react').JSX.Element}
+ */
 export const FallbackError = ({ error, resetErrorBoundary }) => {
   return (
     <div className="min-h-100 w-full flex flex-col items-center justify-center p-6 text-center bg-main-bg rounded-lg shadow-md h-screen ">

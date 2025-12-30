@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import { getData } from "../services/Api";
 import App from "../App";
-import { LisData } from "../components/ListData";
-import { CurrentCountrie } from "../pages/CurrentCountrie";
+import { LisData } from "../components/DataList";
+import { CurrentCountry } from "../pages/CurrentCountry";
 import { LoadingData } from "../components/LoadingData";
 import { FallbackError } from "../components/ErrorBoundary";
 /**
@@ -17,21 +17,21 @@ export const router = createBrowserRouter([
     children: [
       { index: true },
       {
-        path: "ListData",
+        path: "DataList",
         element: <LisData />,
         loader: getData,
         HydrateFallback:LoadingData,
         ErrorBoundary:FallbackError,
       },
       {
-        path: "CurrentCountrie/:id/:name/:population/:img/:topLevelDomain/:area/:nativeName/:subregion/:borders/:capital",
-        element: <CurrentCountrie />,
+        path: "CurrentCountry/:id/:name/:population/:img/:topLevelDomain/:area/:nativeName/:subregion/:borders/:capital",
+        element: <CurrentCountry />,
         HydrateFallback:LoadingData,
       },
       {
         path:"*",
         element:<FallbackError error={{ message: "Lo sentimos, la página que buscas no existe." }} 
-      resetErrorBoundary={() => window.location.href = "/ListData"}/>
+      resetErrorBoundary={() => window.location.href = "/DataList"}/>
       }
     ],
   },
