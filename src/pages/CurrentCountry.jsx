@@ -88,7 +88,7 @@ export const CurrentCountry = () => {
         </div>
         <div className="flex flex-col md:flex-row items-start md:items-center gap-2 py-5 w-full">
           <h2 className="font-bold text-sm">Borders Countries: </h2>
-          <p className="bg-header-bg p-2 text-xs break-words text-center w-full md:w-auto">{borders}</p>
+          <p className="bg-header-bg p-2 text-xs wrap-break-word  text-center w-full md:w-auto">{borders}</p>
         </div>
       </div>
     </section>
